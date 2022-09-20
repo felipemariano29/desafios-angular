@@ -1,0 +1,20 @@
+article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34rem;
+  height: 15rem;
+  margin-top: 3rem;
+  border-radius: 6rem;
+  color: rgba(255,255,255,1);
+  background: rgba(0,212,255,1);
+  box-shadow:
+    10px 10px 26px #cecece,
+    -10px -10px 26px #f2f2f2;
+}
+
+p {
+  font-family: Lato, 'sans-serif';
+  font-size: 5rem;
+  font-weight: 600;
+}
