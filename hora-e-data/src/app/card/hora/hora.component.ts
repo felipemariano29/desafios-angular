@@ -11,7 +11,6 @@ import { Component, OnInit } from '@angular/core';
 export class HoraComponent implements OnInit {
 
   agora = new Date();
-
   hora = this.pegaHora()
 
   constructor() { }
@@ -28,13 +27,10 @@ export class HoraComponent implements OnInit {
   }
 
   pegaHora() {
-    let hrs = this.addZero(this.agora.getHours());
-    let min = this.addZero(this.agora.getMinutes());
-    let seg = this.addZero(this.agora.getSeconds());
+    let hrs = (this.agora.getHours()).toString().padStart(2, "0");
+    let min = (this.agora.getMinutes().toString().padStart(2, "0"));
+    let seg = (this.agora.getSeconds().toString().padStart(2, "0"));
 
     return hrs + ":" + min + ":" + seg
   }
-
-  addZero(data: Number) { return data < 10 ? "0"+data : data }
-
 }

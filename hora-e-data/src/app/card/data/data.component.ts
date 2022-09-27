@@ -12,9 +12,9 @@ export class DataComponent implements OnInit {
 
   agora = new Date();
 
-  dia = this.addZero(this.agora.getDay());
-  mes = this.addZero(this.agora.getMonth());
-  ano = this.addZero(this.agora.getFullYear());
+  dia = (this.agora.getDate()).toString().padStart(2, "0");
+  mes = (this.agora.getMonth() + 1).toString().padStart(2, "0");
+  ano = this.agora.getFullYear();
 
   data = this.dia + "/" + this.mes + "/" + this.ano
 
@@ -22,7 +22,5 @@ export class DataComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  addZero(data: Number) { return data < 10 ? "0"+data : data }
 
 }
