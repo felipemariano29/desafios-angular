@@ -5,6 +5,7 @@ import { DataComponent } from './card/data/data.component';
 import { HoraComponent } from './card/hora/hora.component';
 
 const routes: Routes = [
+
   {
     path: "data",
     component: DataComponent,
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: "hora",
     component: HoraComponent
+  },
+  {
+    path: "**",
+    redirectTo: "/data",
   }
 ];
 
